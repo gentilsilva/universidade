@@ -18,6 +18,7 @@ public class Atividade1 {
 		a = b;
 		b = c;
 		
+		
 		System.out.println("Apos a inversao, o valor a e: " + a + " e o valor b e: " + b);
 		
 	}
