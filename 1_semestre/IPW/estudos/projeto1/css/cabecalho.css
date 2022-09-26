@@ -1,0 +1,22 @@
+header {
+    background-color: #053552;
+}
+
+a {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-family: "Fira Code", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+#button {
+    display: inline-block;
+    background-color: #ffd0a0;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 0 #000000;
+}
