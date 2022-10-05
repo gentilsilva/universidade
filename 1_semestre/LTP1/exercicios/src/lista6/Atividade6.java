@@ -18,9 +18,9 @@ public class Atividade6 {
 			temp = numero2;
 			numero2 = numero1;
 			numero1 = temp;
-			System.out.println("A sequencia de numeros e: " + numero2 + " " + numero2);			
+			System.out.println("A sequencia de numeros e A: " + numero1 + " e B: " + numero2);			
 		} else {
-			System.out.println("A sequencia de numeros e: " + numero1 + " " + numero2);
+			System.out.println("A sequencia de numeros e A: " + numero1 + " B: " + numero2);
 		}
 		
 	}
