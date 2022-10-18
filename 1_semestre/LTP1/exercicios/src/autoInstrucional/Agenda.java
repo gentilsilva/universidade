@@ -57,7 +57,7 @@ public class Agenda {
 					}					
 				}
 				
-			} else if(opcao != 1 || opcao != 2 || opcao != 3 || opcao != 4) {
+			} else if(opcao > 4) {
 				System.out.println("Opção inválida!");
 			}
 			
