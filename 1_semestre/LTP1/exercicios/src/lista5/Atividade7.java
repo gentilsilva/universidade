@@ -17,8 +17,6 @@ public class Atividade7 {
 		
 		porcentagemSalario = salario * 30 / 100;
 		
-		System.out.println(porcentagemSalario);
-		
 		if(porcentagemSalario >= prestacao) {
 			System.out.println("Emprestimo pode ser concedido");
 		} else {
@@ -26,5 +24,4 @@ public class Atividade7 {
 		}
 		
 	}
-	
 }

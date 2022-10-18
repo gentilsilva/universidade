@@ -13,7 +13,7 @@ public class Atividade4 {
 		
 		System.out.print("Digite a letra: ");
 		letra = scan.nextLine();
-		
+
 		verifica = letra.matches("[aeiou]");
 		
 		if(verifica) {
@@ -23,5 +23,4 @@ public class Atividade4 {
 		}
 		
 	}
-	
 }
