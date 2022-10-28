@@ -15,7 +15,7 @@
                 <tr>
                     <th colspan="6">
                         <div class="box-resposta">
-                            <div class="resposta"><span>0</span></div>
+                            <div class="resposta"><span class="resultado">0</span></div>
                         </div>
                     </th>
                 </tr>
@@ -62,7 +62,7 @@
                     <td colspan="2">
                         <div class="input">
                             <div class="valores">
-                                <input class="valor2" type="text">
+                                <input class="valor2" id="value1" type="text">
                             </div>
                         </div>
                     </td>
@@ -75,17 +75,17 @@
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao fatorial">n!</div>
+                            <div class="botao fatorial" role="button" onclick="fatoracao()">n!</div>
                         </div>
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao euler">e</div>
+                            <div class="botao euler" role="button" onclick="euler()">e</div>
                         </div>
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao fibonacci">Fibonacci</div>
+                            <div class="botao fibonacci" role="button" onclick="fibonacci()">Fibonacci</div>
                         </div>
                     </td>
                 </tr>
@@ -95,14 +95,12 @@
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao pi">
-                                PI
-                            </div>
+                            <div class="botao pi" role="button" onclick="pi()">PI</div>
                         </div>
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao inverso">1/x</div>
+                            <div class="botao inverso" role="button" onclick="inverso()">1/x</div>
                         </div>
                     </td>
                     <td>
@@ -139,11 +137,12 @@
                             <div class="botao mod">Mod</div>
                         </div>
                     </td>
-                    <tr>
-                        <td>
-                            <div class="botoes ultima_linha">
-                                <div class="botao binario">Binário</div>
-                            </div>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="botoes ultima_linha">
+                            <div class="botao binario">Binário</div>
+                        </div>
                         </td>
                         <td>
                             <div class="botoes ultima_linha">
@@ -158,9 +157,9 @@
                         <td>
                             <div class="botoes ultima_linha">
                                 <div class="botao baseN">BaseN</div>
-                            </div>
-                        </td>
-                    </tr>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 
