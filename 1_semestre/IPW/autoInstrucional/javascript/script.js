@@ -37,7 +37,13 @@ function fatoracao() {
 }
 
 function euler() {
-   return valor1.value = Math.E;
+    if(valor1.value != "" && valor2.value != "") {
+        return valor1.value = Math.E;
+    } else if(valor1.value != "") {
+        valor2.value = Math.E;
+    } else {
+        return valor1.value = Math.E;
+    }
 }
 
 function fibonacci() {
@@ -68,14 +74,56 @@ function fibonacci() {
 }
 
 function pi() {
-    return valor1.value = Math.PI;
+    if(valor1.value != "" && valor2.value != "") {
+        return valor1.value = Math.PI;
+    } else if(valor1.value != "") {
+        valor2.value = Math.PI;
+    } else {
+        return valor1.value = Math.E;
+    }
 }
 
 function inverso() {
     return resultado.innerHTML = 1 / Number(valor1.value);
 }
 
-function funcaoEuler() {
-    let equacao1 = (Math.E ** (Number(valor1.value) * Number(valor2.value)));
-    let equacao2 = (Math.E ** (Number(valor1.valor1) * Number(valor2.value)));
+// Verificar com professor
+// function funcaoEuler() {
+//     let equacao1 = (Math.E ** (Number(valor1.value) * Number(valor2.value)));
+//     let equacao2 = (Math.E ** (Number(valor1.valor1) * Number(valor2.value)));
+// }
+
+function logaritmo() {
+    let logaritimando = 0;
+    let base = 0;
+    let logaritimo = 0;
+
+    if(valor2.value != "") {
+        logaritimando = Math.log(valor1.value) / Math.log(10);
+        base = Math.log(valor2.value) / Math.log(10);
+        log = logaritimando / base;
+
+        return resultado.innerHTML = log;
+    } else {
+        logaritimando = Math.log(valor1.value) / Math.log(10);
+        base = Math.log(Math.E) / Math.log(10);
+        log = logaritimando / base;
+
+        return resultado.innerHTML = log;
+    }
+
+}
+
+function sen() {
+    if(valor1.value != "" && valor2.value == "") {
+        let graus = Math.sin(valor1.value);
+        let conta = graus * Math.PI / 180;
+        return resultado.innerHTML = conta;
+    } else if(valor2.value != "" && valor1.value == "") {
+        let conta = valor2.value * Math.PI / 180;
+        let rad = Math.rad(conta)
+        return resultado.innerHTML = rad
+    } else {
+        return alert("Entre somente com um valor")
+    }
 }
