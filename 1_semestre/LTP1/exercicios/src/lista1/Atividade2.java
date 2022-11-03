@@ -22,6 +22,8 @@ public class Atividade2 {
 		System.out.println("Para um triangulo de base " + base + " e altura: " + altura + " a area e de valor: "
 				+ area + " metros quadrado");
 		
+		scan.close();
+		
 	}
 	
 }

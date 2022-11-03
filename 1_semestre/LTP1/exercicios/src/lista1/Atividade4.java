@@ -21,6 +21,8 @@ public class Atividade4 {
 		
 		System.out.println("O seu novo salario e de: " + salarioReajustado);
 		
+		scan.close();
+		
 	}
 	
 }

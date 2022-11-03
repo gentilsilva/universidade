@@ -3,127 +3,217 @@ let valor2 = document.querySelector('.valor2');
 let resultado = document.querySelector('.resultado');
 
 function somar() {    
-    return resultado.innerHTML = Number(valor1.value) + Number(valor2.value);
+    resultado.innerHTML = Number(valor1.value) + Number(valor2.value);
 }
 
 function subtrair() {
-    return resultado.innerHTML = Number(valor1.value) - Number(valor2.value);
+    resultado.innerHTML = Number(valor1.value) - Number(valor2.value);
 }
 
 function multiplicar() {
-    return resultado.innerHTML = Number(valor1.value) * Number(valor2.value);
+    resultado.innerHTML = Number(valor1.value) * Number(valor2.value);
 }
 
 function dividir() {
-    return resultado.innerHTML = Number(valor1.value) / Number(valor2.value);
+    resultado.innerHTML = Number(valor1.value) / Number(valor2.value);
 }
 
 function potenciacao() {
     let resposta = (Number(valor1.value) ** Number(valor2.value)).toLocaleString();
     if(resposta.length > 15) {
-        return resultado.innerHTML = (Number(valor1.value) ** Number(valor2.value)).toExponential();
+        resultado.innerHTML = (Number(valor1.value) ** Number(valor2.value)).toExponential();
     }
-    return resultado.innerHTML = Number(valor1.value) ** Number(valor2.value);
+    resultado.innerHTML = Number(valor1.value) ** Number(valor2.value);
 }
 
-function fatoracao() {
+function fatorial(fator) {
     let fatorial = 1;
-    let fator = Number(valor1.value);
     for(i = fator; i > 0; i--) {
-        fatorial *= fator;
-        fator--;
+        fatorial *= i;
     }
     return resultado.innerHTML = fatorial;
 }
 
-function euler() {
-    if(valor1.value != "" && valor2.value != "") {
-        return valor1.value = Math.E;
-    } else if(valor1.value != "") {
-        valor2.value = Math.E;
-    } else {
-        return valor1.value = Math.E;
+function euler(fator) {
+    let somatoria = 1;
+    for(let i = 1; i <= fator; i++) {
+        somatoria += 1/fatorial(i);
     }
+    resultado.innerHTML = somatoria;
 }
 
 function fibonacci() {
     let entrada = Number(valor1.value);
-    let anterior = 0;
-    let posterior = 0;
-    let valorFinal = 0;
-    let ultimoValor = 0;
-
+    let lista = [];
+    if(valor1.value == "") {
+        alert("Preencha o primeiro campo para realizar esta operação");
+    }
     for(i = 0; i < entrada; i++) {
-        if(i == 0) {
-            anterior = 1;
-            posterior = 1;
-            valorFinal = 1;
-            ultimoValor = 1;
-        }
-        if(i == 1) {
-            valorFinal += 1;
-        }
+        if(i == 0 || i == 1) {
+            lista.push(1)
+        } 
         if(i > 1) {
-            valorFinal += anterior + posterior;
-            ultimoValor = anterior + posterior;
-            anterior = posterior;
-            posterior = ultimoValor;
+            let soma = lista[i - 1] + lista[i - 2];
+            lista.push(soma);
         }
     }
-    return resultado.innerHTML = valorFinal;
+    resultado.innerHTML = lista;
 }
 
 function pi() {
     if(valor1.value != "" && valor2.value != "") {
-        return valor1.value = Math.PI;
+        valor1.value = Math.PI;
     } else if(valor1.value != "") {
         valor2.value = Math.PI;
     } else {
-        return valor1.value = Math.E;
+        valor1.value = Math.PI;
     }
 }
 
 function inverso() {
-    return resultado.innerHTML = 1 / Number(valor1.value);
+    resultado.innerHTML = 1 / Number(valor1.value);
 }
 
-// Verificar com professor
-// function funcaoEuler() {
-//     let equacao1 = (Math.E ** (Number(valor1.value) * Number(valor2.value)));
-//     let equacao2 = (Math.E ** (Number(valor1.valor1) * Number(valor2.value)));
-// }
+function eulerX() {
+    resultado.innerHTML = Math.log(valor1.value);
+}
 
 function logaritmo() {
     let logaritimando = 0;
     let base = 0;
-    let logaritimo = 0;
+    let log = 0;
 
     if(valor2.value != "") {
         logaritimando = Math.log(valor1.value) / Math.log(10);
         base = Math.log(valor2.value) / Math.log(10);
         log = logaritimando / base;
 
-        return resultado.innerHTML = log;
+        resultado.innerHTML = log;
     } else {
         logaritimando = Math.log(valor1.value) / Math.log(10);
-        base = Math.log(Math.E) / Math.log(10);
-        log = logaritimando / base;
+        log = logaritimando;
 
-        return resultado.innerHTML = log;
+        resultado.innerHTML = log;
     }
 
 }
 
-function sen() {
+function seno() {
     if(valor1.value != "" && valor2.value == "") {
-        let graus = Math.sin(valor1.value);
-        let conta = graus * Math.PI / 180;
-        return resultado.innerHTML = conta;
+        let rad = Math.sin(valor1.value) * Math.PI / 180;
+        resultado.innerHTML = rad;
     } else if(valor2.value != "" && valor1.value == "") {
-        let conta = valor2.value * Math.PI / 180;
-        let rad = Math.rad(conta)
-        return resultado.innerHTML = rad
+        let rad = Math.sin(valor1.value) * Math.PI / 180;
+        resultado.innerHTML = rad;
     } else {
-        return alert("Entre somente com um valor")
+        alert("Entre somente com um valor")
+    }
+}
+
+function cosseno() {
+    if(valor1.value != "" && valor2.value == "") {
+        let rad = Math.cos(valor1.value) * Math.PI / 180;
+        resultado.innerHTML = rad;
+    } else if(valor2.value != "" && valor1.value == "") {
+        let rad = Math.cos(valor1.value) * Math.PI / 180;
+        resultado.innerHTML = rad;
+    } else {
+        alert("Entre somente com um valor")
+    }
+}
+
+function tangente() {
+    if(valor1.value != "" && valor2.value == "") {
+        let rad = Math.tan(valor1.value) * Math.PI / 180;
+        resultado.innerHTML = rad;
+    } else if(valor2.value != "" && valor1.value == "") {
+        let rad = Math.tan(valor1.value) * Math.PI / 180;
+        resultado.innerHTML = rad;
+    } else {
+        alert("Entre somente com um valor")
+    }
+}
+
+function modulo() {
+    if(valor2.value == "" || valor2.value == 0) {
+        alert("Segundo valor não pode ser vazio ou zero!")
+    } else {
+        let resto = valor1.value % valor2.value;
+        resultado.innerHTML = resto; 
+    }
+}
+
+function binario() {
+    let binario = []
+    let dividendo = valor1.value;
+    do {
+        let resto = dividendo % 2;
+        dividendo = Number.parseInt(dividendo / 2);
+        binario.push(resto);
+    } while(dividendo > 1)
+    binario.push(1);
+    binario = binario.reverse();
+    binario = binario.join("");
+    resultado.innerHTML = binario;
+}
+
+function octa() {
+    let octa = []
+    let dividendo = valor1.value;
+    do {
+        octa.push(dividendo % 8);
+        dividendo = Math.floor(dividendo / 8);
+    } while(dividendo > 8 - 1)
+    octa.push(dividendo)
+    octa = octa.reverse();
+    octa = octa.join("");
+    resultado.innerHTML = octa;
+}
+
+function hexa() {
+    let total = []
+    let dividendo = valor1.value;
+    do {
+        total.push(dividendo % 16);
+        dividendo = Math.floor(dividendo / 16);
+    } while(dividendo > 16 - 1)
+    for(let i = 0; i < total.length; i++) {
+        if(total[i] == 10) {
+            total[i] = "A";
+        } else if(total[i] == 11) {
+            total[i] = "B";
+        } else if(total[i] == 12) {
+            total[i] = "C";
+        } else if(total[i] == 13) {
+            total[i] = "D";
+        } else if(total[i] == 14) {
+            total[i] = "E";
+        } else if(total[i] == 15) {
+            total[i] = "F";
+        }
+    }
+    if(dividendo != 0) {
+        total.push(dividendo);
+    }
+    total = total.reverse();
+    total = total.join(""); 
+    resultado.innerHTML = total;
+}
+
+function baseN() {
+    let total = []
+    let dividendo = valor1.value;
+    let base = valor2.value;
+    if(valor2.value > 9) {
+        alert("Valor de base não pode ser maior que 9!")
+    } else {
+        do {
+            total.push(dividendo % base);
+            dividendo = Math.floor(dividendo / base);
+        } while(dividendo > valor2.value - 1)
+        total.push(dividendo);
+        total = total.reverse();
+        total = total.join(""); 
+        resultado.innerHTML = total;
     }
 }

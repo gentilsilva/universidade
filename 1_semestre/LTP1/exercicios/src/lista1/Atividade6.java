@@ -30,6 +30,8 @@ public class Atividade6 {
 		
 		System.out.println("O salario final do vendedor e: " + salarioFinal);
 		
+		scan.close();
+		
 	}
 	
 }

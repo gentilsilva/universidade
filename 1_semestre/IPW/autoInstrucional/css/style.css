@@ -4,7 +4,7 @@ body {
 
 table {
     color: #bdc1c6;
-    border: 1px solid;
+    border-bottom: 1px solid;
 }
 
 td {
@@ -13,7 +13,7 @@ td {
 }
 
 .calculadora {
-    margin: 20px 20px;
+    margin: 30px 30px;
 }
 
 .box-resposta {

@@ -25,6 +25,8 @@ public class Atividade3 {
 		idadeEmDias = idadeEmDias + idadeEmAnos + idadeEmMeses;
 		
 		System.out.println("A sua idade em dias e equivalente a: " + idadeEmDias + " dias.");
+	
+		scan.close();
 		
 	}
 	

@@ -7,18 +7,21 @@ public class exemplo {
 	public static void main(String[] args) {
 	
 		String nomeUsuario, nomePai, nomeMae;
-		Scanner leia = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Digite o seu nome: ");
-		nomeUsuario = leia.nextLine();
+		nomeUsuario = scan.nextLine();
 		
 		System.out.print("Digite o nome do seu pai:");
-		nomePai = leia.nextLine();
+		nomePai = scan.nextLine();
 		
 		System.out.print("Digite o nome da mãe: ");
-		nomeMae = leia.nextLine();
+		nomeMae = scan.nextLine();
 		
 		System.out.println(nomeUsuario + ", voce e filho de " + nomePai + " e " + nomeMae);
+		
+		scan.close();
+		
 	}
 	
 }

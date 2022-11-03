@@ -25,7 +25,7 @@
                     <td colspan="2">
                         <div class="input">
                             <div class="valores">
-                                <input class="valor1" type="text">
+                                <input name="btn-valor" class="valor1" type="text">
                             </div>
                         </div>
                     </td>
@@ -75,12 +75,12 @@
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao fatorial" role="button" onclick="fatoracao()">n!</div>
+                            <div class="botao fatorial" role="button" onclick="fatorial(valor1.value)">n!</div>
                         </div>
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao euler" role="button" onclick="euler()">e</div>
+                            <div class="botao euler" role="button" onclick="euler(valor1.value)">e</div>
                         </div>
                     </td>
                     <td>
@@ -91,7 +91,8 @@
                 </tr>
                 <tr>
                     <td rowspan="3" colspan="2">
-                        <div></div>
+                        <div>
+                        </div>
                     </td>
                     <td>
                         <div class="botoes">
@@ -105,7 +106,7 @@
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao euler_elevadoX">
+                            <div class="botao euler_elevadoX" role="button" onclick="eulerX()">
                                 e<sup>x</sup>
                             </div>
                         </div>
@@ -119,44 +120,44 @@
                 <tr>
                     <td>
                         <div class="botoes">
-                            <div class="botao seno" role="button" onclick="sen()">sen</div>
+                            <div class="botao seno" role="button" onclick="seno()">sen</div>
                         </div>
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao coseno">cos</div>
+                            <div class="botao coseno" role="button" onclick="cosseno()">cos</div>
                         </div>
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao tangente">tan</div>
+                            <div class="botao tangente" role="button" onclick="tangente()">tan</div>
                         </div>
                     </td>
                     <td>
                         <div class="botoes">
-                            <div class="botao mod">Mod</div>
+                            <div class="botao mod" role="button" onclick="modulo()">Mod</div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="botoes ultima_linha">
-                            <div class="botao binario">Binário</div>
+                            <div class="botao binario" role="button" onclick="binario()">Binário</div>
                         </div>
                         </td>
                         <td>
                             <div class="botoes ultima_linha">
-                                <div class="botao octa">Octa</div>
+                                <div class="botao octa" role="button" onclick="octa()">Octa</div>
                             </div>
                         </td>
                         <td>
                             <div class="botoes ultima_linha">
-                                <div class="botao hexa">Hexa</div>
+                                <div class="botao hexa" role="button" onclick="hexa()">Hexa</div>
                             </div>
                         </td>
                         <td>
                             <div class="botoes ultima_linha">
-                                <div class="botao baseN">BaseN</div>
+                                <div class="botao baseN" role="button" onclick="baseN()">BaseN</div>
                         </div>
                     </td>
                 </tr>

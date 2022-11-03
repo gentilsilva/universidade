@@ -23,6 +23,8 @@ public class Atividade5 {
 		
 		System.out.println("O valor para o consumidor deste determinado carro e: " + custoParaConsumidor);
 		
+		scan.close();
+		
 	}
 	
 }
