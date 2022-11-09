@@ -39,7 +39,7 @@ function euler(fator) {
     for(let i = 1; i <= fator; i++) {
         somatoria += 1/fatorial(i);
     }
-    resultado.innerHTML = somatoria;
+    return resultado.innerHTML = somatoria;
 }
 
 function fibonacci() {
@@ -61,21 +61,18 @@ function fibonacci() {
 }
 
 function pi() {
-    if(valor1.value != "" && valor2.value != "") {
-        valor1.value = Math.PI;
-    } else if(valor1.value != "") {
-        valor2.value = Math.PI;
-    } else {
-        valor1.value = Math.PI;
-    }
+    resultado.innerHTML = Math.PI;
 }
 
 function inverso() {
     resultado.innerHTML = 1 / Number(valor1.value);
 }
 
-function eulerX() {
-    resultado.innerHTML = Math.log(valor1.value);
+function eulerX(fator) {
+    let e = 0;
+    e = euler(fator);
+    let resposta = e ** valor2.value;
+    resultado.innerHTML = resposta;
 }
 
 function logaritmo() {
@@ -99,39 +96,48 @@ function logaritmo() {
 }
 
 function seno() {
+    let rad = 0;
+    let sen = 0;
     if(valor1.value != "" && valor2.value == "") {
-        let rad = Math.sin(valor1.value) * Math.PI / 180;
-        resultado.innerHTML = rad;
+        rad = valor1.value * Math.PI / 180;
+        sen = Math.sen(rad)
     } else if(valor2.value != "" && valor1.value == "") {
-        let rad = Math.sin(valor1.value) * Math.PI / 180;
-        resultado.innerHTML = rad;
+        rad = valor1.value * Math.PI / 180;
+        sen = Math.sen(rad)
     } else {
         alert("Entre somente com um valor")
     }
+    resultado.innerHTML = sen;
 }
 
 function cosseno() {
+    let rad = 0;
+    let cos = 0
     if(valor1.value != "" && valor2.value == "") {
-        let rad = Math.cos(valor1.value) * Math.PI / 180;
-        resultado.innerHTML = rad;
+        rad = valor1.value * Math.PI / 180;
+        cos = Math.cos(rad)
     } else if(valor2.value != "" && valor1.value == "") {
-        let rad = Math.cos(valor1.value) * Math.PI / 180;
-        resultado.innerHTML = rad;
+        rad = valor1.value * Math.PI / 180;
+        cos = Math.cos(rad)
     } else {
         alert("Entre somente com um valor")
     }
+    resultado.innerHTML = cos;
 }
 
 function tangente() {
+    let rad = 0;
+    let tan = 0;
     if(valor1.value != "" && valor2.value == "") {
-        let rad = Math.tan(valor1.value) * Math.PI / 180;
-        resultado.innerHTML = rad;
+        rad = valor1.value * Math.PI / 180;
+        tan = Math.tan(rad)
     } else if(valor2.value != "" && valor1.value == "") {
-        let rad = Math.tan(valor1.value) * Math.PI / 180;
-        resultado.innerHTML = rad;
+        rad = valor1.value * Math.PI / 180;
+        tan = Math.tan(rad)
     } else {
         alert("Entre somente com um valor")
     }
+    resultado.innerHTML = tan;
 }
 
 function modulo() {
