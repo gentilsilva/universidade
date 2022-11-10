@@ -28,20 +28,20 @@ public class Atividade9 {
 				System.out.print("Digite a idade: ");
 				idade = scan.nextInt();
 				if(idade <= 17) {
-					total += idade;
-					faixa1 += idade;
+					total++;
+					faixa1++;
 				} else if(idade <= 35) {
-					total += idade;
-					faixa2 += idade;
+					total++;
+					faixa2++;
 				} else if(idade <= 50) {
-					total += idade;
-					faixa3 += idade;
+					total++;
+					faixa3++;
 				} else if(idade <= 65) {
-					total += idade;
-					faixa4 += idade;
+					total++;
+					faixa4++;
 				} else {
-					total += idade;
-					faixa5 += idade;
+					total++;
+					faixa5++;
 				}
 			} else if(opcao > 2){
 				System.out.println("Opcao invalida");

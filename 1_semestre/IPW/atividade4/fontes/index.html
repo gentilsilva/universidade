@@ -90,6 +90,61 @@
                 </div>
                 <!--Quarta linha-->
                 <div class="row">
+                    <div class="col-lg-2 mb-3">
+                        <label for="userState" class="form-label">Estado</label>
+                        <div class="form-group">
+                            <div class="col-lg-15">
+                                <select class="form-select" id="userState">
+                                    <option value="acre" selected>Acre</option>
+                                    <option value="alagoas">Alagoas</option>
+                                    <option value="amapa">Amapá</option>
+                                    <option value="amazonas">Amazonas</option>
+                                    <option value="bahia">Bahia</option>
+                                    <option value="ceara">Ceará</option>
+                                    <option value="espiritoSanto">Espírito Santo</option>
+                                    <option value="goias">Goiás</option>
+                                    <option value="maranhao">Maranhão</option>
+                                    <option value="matoGrosso">Mato Grosso</option>
+                                    <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
+                                    <option value="minasGerais">Minas Gerais</option>
+                                    <option value="para">Pará</option>
+                                    <option value="paraiba">Paraíba</option>
+                                    <option value="parana">Paraná</option>
+                                    <option value="pernambuco">Pernambuco</option>
+                                    <option value="piaui">Piauí</option>
+                                    <option value="rioDeJaneiro">Rio de Janeiro</option>
+                                    <option value="rioGrandeDoNorte">Rio Grande do Norte</option>
+                                    <option value="rioGrandeDoSul">Rio Grande do Sul</option>
+                                    <option value="rondonia">Rondônia</option>
+                                    <option value="roraima">Roraima</option>
+                                    <option value="santaCatarina">Santa Catarina</option>
+                                    <option value="saoPaulo">São Paulo</option>
+                                    <option value="sergipe">Sergipe</option>
+                                    <option value="tocantins">Tocantins</option>
+                                    <option value="distritoFederal">Distrito Federal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label for="userCity" class="form-label">Cidade</label>
+                        <div class="form-group">
+                            <div class="col-lg-13">
+                                <input type="text" class="form-control" id="userCity" placeholder="Cidade">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label for="userPostalCode" class="form-label">CEP</label>
+                        <div class="form-group">
+                            <div class="col-lg-13">
+                                <input type="number" class="form-control" id="userPostalCode" placeholder="CEP">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Quinta linha-->
+                <div class="row">
                     <div class="col-lg-3 mb-3">
                         <label for="userAddress" class="form-label">Logradouro</label>
                         <div class="form-group">
@@ -115,7 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <!--Quinta linha-->
+                <!--Sexta linha-->
                 <div class="row">
                     <div class="col-lg-2 mb-3">
                         <label for="userLevelEducation" class="form-label">Escolaridade</label>
@@ -153,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <!--Sexta linha-->
+                <!--Sétima linha-->
                 <div class="row">
                     <div class="d-flex justify-content-between col-lg-6 mb-3">
                         <legend for="maritalStatus" class="col-form-label col-sm-2 pt-0">Estado Civíl:</legend>
@@ -171,7 +226,7 @@
                         </div>
                     </div>
                 </div>
-                <!--Sétima linha-->
+                <!--Oitava linha-->
                 <div class="row">
                     <div class="col-lg-6 mb-3">
                         <label for="observations" class="form-label">Observações</label>
@@ -180,16 +235,16 @@
                         </div>
                     </div>
                 </div>
-                <!--Oitava linha-->
+                <!--Nona linha-->
                 <div class="row">
                     <div class="col-lg-6 mb-3 d-flex justify-content-around">
                         <div class="col-lg-13">
-                            <button type="submit" class="btn btn-primary btn-sm">
+                            <button type="submit" class="btn btn-primary btn-sm" id="btn-submit">
                                 Enviar dados
                             </button>
                         </div>
                         <div class="col-lg-15">
-                            <button type="reset" class="btn btn-warning btn-sm">
+                            <button type="reset" class="btn btn-warning btn-sm" id="btn-reset">
                                 Limpar dados
                             </button>
                         </div>
