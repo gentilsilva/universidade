@@ -1,23 +1,29 @@
 let valor1 = document.querySelector('.valor1');
 let valor2 = document.querySelector('.valor2');
 let resultado = document.querySelector('.resultado');
+let arrFibonacci = [];
 
+// Função para somar os dois inputs
 function somar() {    
     resultado.innerHTML = Number(valor1.value) + Number(valor2.value);
 }
 
+// Função para subtrair o primeiro input pelo segundo
 function subtrair() {
     resultado.innerHTML = Number(valor1.value) - Number(valor2.value);
 }
 
+// Função que multiplica o primeiro input pelo segundo
 function multiplicar() {
     resultado.innerHTML = Number(valor1.value) * Number(valor2.value);
 }
 
+// Função que divide o primeiro input pelo segundo
 function dividir() {
     resultado.innerHTML = Number(valor1.value) / Number(valor2.value);
 }
 
+// Função que calcula o primeiro input elevado ao valor do segundo
 function potenciacao() {
     let resposta = (Number(valor1.value) ** Number(valor2.value)).toLocaleString();
     if(resposta.length > 15) {
@@ -26,14 +32,26 @@ function potenciacao() {
     resultado.innerHTML = Number(valor1.value) ** Number(valor2.value);
 }
 
+
+// Função recursiva para calcular fatorial
 function fatorial(fator) {
-    let fatorial = 1;
-    for(i = fator; i > 0; i--) {
-        fatorial *= i;
+    if(fator < 0) {
+        return false;
+    } else {
+        let resposta =  fator === 0 ? 1 : fator * fatorial((fator - 1));
+        return resultado.innerHTML = resposta;
     }
-    return resultado.innerHTML = fatorial;
 }
 
+// function fatorial(fator) {
+//     let fatorial = 1;
+//     for(i = fator; i > 0; i--) {
+//         fatorial *= i;
+//     }
+//     return resultado.innerHTML = fatorial;
+// }
+
+// Função para calcular número de euler
 function euler(fator) {
     let somatoria = 1;
     for(let i = 1; i <= fator; i++) {
@@ -42,23 +60,42 @@ function euler(fator) {
     return resultado.innerHTML = somatoria;
 }
 
-function fibonacci() {
-    let entrada = Number(valor1.value);
-    let lista = [];
-    if(valor1.value == "") {
-        alert("Preencha o primeiro campo para realizar esta operação");
+// Calcula o fibonacci usando recursividade
+function fibonacci(fator) {
+    if(fator < 2) {
+      return fator;
+    } else {
+      let nFibonacci = fibonacci(fator - 1) + fibonacci(fator - 2);
+      return nFibonacci
     }
-    for(i = 0; i < entrada; i++) {
-        if(i == 0 || i == 1) {
-            lista.push(1)
-        } 
-        if(i > 1) {
-            let soma = lista[i - 1] + lista[i - 2];
-            lista.push(soma);
-        }
-    }
-    resultado.innerHTML = lista;
 }
+
+// Retorna a sequência de fibonacci no html
+function chamarFibonacci(fator) {
+    for(let i = 1; i <= fator; i++) {
+        arrFibonacci.push(fibonacci(i));
+    }
+    resultado.innerHTML = arrFibonacci;
+}
+
+// Função que utiliza o primeiro input para calcular a sequência de Fibonacci
+// function fibonacci() {
+//     let entrada = Number(valor1.value);
+//     let lista = [];
+//     if(valor1.value == "") {
+//         alert("Preencha o primeiro campo para realizar esta operação");
+//     }
+//     for(i = 0; i < entrada; i++) {
+//         if(i == 0 || i == 1) {
+//             lista.push(1)
+//         } 
+//         if(i > 1) {
+//             let soma = lista[i - 1] + lista[i - 2];
+//             lista.push(soma);
+//         }
+//     }
+//     resultado.innerHTML = lista;
+// }
 
 function pi() {
     resultado.innerHTML = Math.PI;
