@@ -39,6 +39,8 @@ public class Atividade1 {
 		percentualDeVotos = (votosValidos * 100) / eleitores;
 		System.out.printf("\nO percentual de votos brancos e: %.1f ", percentualDeVotos);
 		
+		scan.close();
+		
 	}
 	
 }

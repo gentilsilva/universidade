@@ -22,6 +22,8 @@ public class Atividade2 {
 //		Imprime o resultado
 		System.out.print("Numero 1 = " + numero1 + "\n" + "Numero 2 = " + numero2);
 		
+		scan.close();
+		
 	}
 	
 }

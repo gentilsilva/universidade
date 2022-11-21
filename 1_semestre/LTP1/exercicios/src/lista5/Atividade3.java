@@ -25,5 +25,7 @@ public class Atividade3 {
 			System.out.println("O maior numero e o terceiro numero - " + num3);
 		}
 
+		scan.close();
+		
 	}
 }

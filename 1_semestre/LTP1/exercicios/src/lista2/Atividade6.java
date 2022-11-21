@@ -21,6 +21,8 @@ public class Atividade6 {
 //		Imprime o resultado
 		System.out.println("A area do quadrado e de: " + areaQuadrado + "m quadrados.");
 		
+		scan.close();
+		
 	}
 	
 }

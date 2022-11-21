@@ -26,6 +26,8 @@ public class Atividade4 {
 //		Imprime o resultado
 		System.out.println("Seus pais possuem " + somaDeIrmaos + " filhos.");
 		
+		scan.close();
+		
 	}
 	
 }

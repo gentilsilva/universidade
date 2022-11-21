@@ -32,5 +32,7 @@ public class Atividade6 {
 			System.out.printf("Obesidade grave - IMC: %.2f", imc);
 		}
 		
+		scan.close();
+		
 	}
 }

@@ -20,6 +20,8 @@ public class Atividade1 {
 			System.out.println(nomeUsuario);
 		}
 		
+		scan.close();
+		
 	}
 	
 }

@@ -20,6 +20,8 @@ public class Atividade2 {
 		
 		System.out.println(mensgasem);
 		
+		scan.close();
+		
 	}
 	
 }

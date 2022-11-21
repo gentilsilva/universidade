@@ -25,5 +25,8 @@ public class Atividade5 {
 		} else {
 			System.out.printf("Aluno reprovado com media: %.2f ", media);
 		}
+		
+		scan.close();
+		
 	}
 }

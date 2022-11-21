@@ -35,6 +35,8 @@ public class Atividade2b {
 		calculo = Math.sqrt(Math.pow(numero1, 2) + Math.pow(numero2, 2));
 		System.out.printf("A raiz quadrada da soma dos valores elevado ao quadrado �: %.2f", calculo);
 		
+		scan.close();
+		
 	}
 	
 }

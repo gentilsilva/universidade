@@ -27,6 +27,8 @@ public class Atividade3 {
 //		Imprime o resultado
 		System.out.println(nomeUsuario + ", voce e filho de " + nomePai + " e " + nomeMae);
 		
+		scan.close();
+		
 	}
 	
 }

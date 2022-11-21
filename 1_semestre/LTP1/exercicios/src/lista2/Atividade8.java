@@ -28,6 +28,8 @@ public class Atividade8 {
 //		Imprime o resultado
 		System.out.println(mensagem);
 		
+		scan.close();
+		
 	}
 	
 }

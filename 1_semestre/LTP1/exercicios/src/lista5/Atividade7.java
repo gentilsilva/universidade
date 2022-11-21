@@ -23,5 +23,7 @@ public class Atividade7 {
 			System.out.println("Emprestimo nao pode ser concedido");
 		}
 		
+		scan.close();
+		
 	}
 }

@@ -20,6 +20,8 @@ public class Atividade3a {
 //		Imprime o valor em celsius
 		System.out.printf("O valor em celsius �: %.2f �C", valorCelsius);
 		
+		scan.close();
+		
 	}
 	
 }

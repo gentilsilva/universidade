@@ -25,6 +25,8 @@ public class Atividade2a {
 			System.out.println(numeroTabuada + " * " + i + " = " + multiplicacao);
 		}
 		
+		scan.close();
+		
 	}
 	
 }

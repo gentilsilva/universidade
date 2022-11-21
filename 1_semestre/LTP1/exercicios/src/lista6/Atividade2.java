@@ -21,6 +21,8 @@ public class Atividade2 {
 			System.out.println("Os numeros sao iguais.");
 		}
 		
+		scan.close();
+		
 	}
 	
 }

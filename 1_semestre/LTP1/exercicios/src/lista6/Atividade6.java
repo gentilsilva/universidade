@@ -23,6 +23,8 @@ public class Atividade6 {
 			System.out.println("A sequencia de numeros e A: " + numero1 + " B: " + numero2);
 		}
 		
+		scan.close();
+		
 	}
 	
 }

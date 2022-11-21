@@ -18,6 +18,9 @@ public class Atividade2 {
 		} else {
 			System.out.println("Este numero nao esta entre 0 e 10");
 		}
+		
+		scan.close();
+		
 	}
 	
 }

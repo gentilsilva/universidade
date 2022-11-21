@@ -29,6 +29,8 @@ public class Atividade9 {
 //		Imprime o resultado
 		System.out.println(mensagem);
 		
+		scan.close();
+		
 	}
 	
 }

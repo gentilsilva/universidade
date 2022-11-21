@@ -22,5 +22,7 @@ public class Atividade1 {
 			System.out.println("O número digitado é par");
 		}
 		
+		scan.close();
+		
 	}
 }

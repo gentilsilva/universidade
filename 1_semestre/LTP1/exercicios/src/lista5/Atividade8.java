@@ -41,5 +41,7 @@ public class Atividade8 {
 			System.out.println("Programa finalizado");
 		}
 		
+		scan.close();
+		
 	}
 }

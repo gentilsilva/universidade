@@ -22,5 +22,7 @@ public class Atividade4 {
 			System.out.println("A letra digitada e consoante");
 		}
 		
+		scan.close();
+		
 	}
 }

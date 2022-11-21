@@ -18,6 +18,8 @@ public class Atividade1 {
 			System.out.println("O numero digitado nao e maior que 10");
 		}
 		
+		scan.close();
+		
 	}
 	
 }

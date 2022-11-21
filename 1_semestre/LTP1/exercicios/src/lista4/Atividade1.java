@@ -32,6 +32,8 @@ public class Atividade1 {
 //		Imprime o valor em milimetros
 		System.out.printf("\nO valor de %.2f m para decimetro �: %.2f mm", valorMetros, valorTransformado);
 		
+		scan.close();
+		
 	}
 	
 }

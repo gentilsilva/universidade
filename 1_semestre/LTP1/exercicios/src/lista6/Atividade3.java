@@ -18,6 +18,8 @@ public class Atividade3 {
 			System.out.println("Este numero e impar");
 		}
 		
+		scan.close();
+		
 	}
 	
 }

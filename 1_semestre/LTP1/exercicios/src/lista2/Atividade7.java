@@ -25,6 +25,8 @@ public class Atividade7 {
 //		Imprime o resultado
 		System.out.println("A soma de " + num1 + " + " + num2 + " = " + soma);
 		
+		scan.close();
+		
 	}
 	
 }

@@ -22,6 +22,8 @@ public class Atividade5 {
 			System.out.println("O maior numero e: " + numero2);
 		}
 		
+		scan.close();
+		
 	}
 	
 }

@@ -22,6 +22,8 @@ public class Atividade5 {
 		System.out.print("O numero digitado e: " + numeroInteiro + "\n" + " seu antecessor e: " + numeroAntecessor + "\n"
 				+ " seu sucessor e: " + numeroSucessor);
 		
+		scan.close();
+		
 	}
 	
 }

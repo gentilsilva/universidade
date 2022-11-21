@@ -21,6 +21,8 @@ public class Atividade4 {
 			System.out.println("O valor de A nao e divisivel pelo valor B");
 		}
 		
+		scan.close();
+		
 	}
 	
 }
