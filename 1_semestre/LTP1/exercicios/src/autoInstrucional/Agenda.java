@@ -19,20 +19,24 @@ public class Agenda {
 					+ "2 - Listar todos os contatos \n"
 					+ "3 - Buscar contato por nome \n"
 					+ "4 - Sair \n"
-					+ "Digite: ");
+					+ "Selecione a opção: ");
 			opcao = scan.nextInt();
 			
 			if(opcao == 1) {				
-				for(int i = contador; i < contador + 1;) {
-					for(int j = 0; j < 3; j++) {
-						System.out.print("Digite em ordem: nome, e-mail e número. Pressione enter após cada "
-								+ "informação digitada. \n"
-								+ "Digite: ");
-						dados = scan.next().toUpperCase();
-						agenda[i][j] = dados;
+				if(contador < 100) {
+					for(int i = contador; i < contador + 1;) {
+						System.out.print("Digite em ordem: nome, e-mail e número de telefone. \n"
+								+ "Pressione enter após cada informação digitada. \n");
+						for(int j = 0; j < 3; j++) {
+							System.out.print("Digite: ");
+							dados = scan.next().toUpperCase();
+							agenda[i][j] = dados;
+						}
+						contador++;
+						break;
 					}
-					contador++;
-					break;
+				} else {
+					System.out.println("Agenda cheia, não é possível adicionar mais contatos!");
 				}
 				
 			} else if(opcao == 2) {				
@@ -47,7 +51,7 @@ public class Agenda {
 				}
 				
 			} else if(opcao == 3) {
-				System.out.print("Digite o nome procurado: ");
+				System.out.print("Digite o nome do contado desejado: ");
 				dados = scan.next().toUpperCase();
 				for(int i = 0; i < agenda.length; i++) {
 					String mensagem = "";
