@@ -5,9 +5,31 @@ body {
 }
 
 header {
-    height: 50px;
+    height: 80px;
     font-family: Helvetica, sans-serif;
     text-align: center;
+}
+
+.cabecalho {
+    display: flex;
+    background-color: #34a4eb;
+    margin-left: 0;
+}
+
+.cabecalho_imagem {
+    margin-left: 5%;
+    width: 80px;
+    height: 77px;
+}
+
+.imagem_fumec {
+    width: 200px;
+    height: 77px;
+}
+
+.cabecalho_titulo {
+    margin-left: 28%;
+    margin-top: 18px;
 }
 
 .middle {
