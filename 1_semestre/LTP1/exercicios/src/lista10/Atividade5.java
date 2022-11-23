@@ -23,11 +23,11 @@ public class Atividade5 {
 		
 		System.out.println("\nA matriz digiada: ");
 		for(int i = 0; i < 5; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 5; j++) {
 				mensagem += arrNumeros[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 		}
 		
 		System.out.println();

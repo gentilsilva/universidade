@@ -30,11 +30,11 @@ public class Atividade4 {
 		}
 		
 		for(int i = 0; i < 4; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 4; j++) {
 				mensagem += arrMaiorIndice[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 		}
 		
 		System.out.printf("O maior valor é %d e ele se encontra na linha %d e coluna %d .", maiorValor, maiorIndiceLinha, maiorIndiceColuna);

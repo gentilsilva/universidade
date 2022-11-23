@@ -26,11 +26,11 @@ public class Atividade1 {
 		
 //		Imprime vetor
 		System.out.println();
-		String mensagem = "[ ";
+		String mensagem = "| ";
 		for(int i = 0; i < 10; i++) {
 			mensagem += vetNumeros[i] + " ";
 		}
-		System.out.println(mensagem + "]");
+		System.out.println(mensagem + "|");
 		
 		System.out.println();
 		System.out.printf("O maior número é: %d. \n"

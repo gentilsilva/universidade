@@ -6,6 +6,7 @@ public class Atividade2 {
 		
 		int[][] arrNumeros = new int[5][5];
 		
+		// Preenche a matriz
 		for(int i = 0; i < 5; i++) {
 			for(int j = 0; j < 5; j++) {
 				if(i == j) {
@@ -16,12 +17,13 @@ public class Atividade2 {
 			}
 		}
 		
+//		Imprime a matriz
 		for(int i = 0; i < 5; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 5; j++) {
 				mensagem += arrNumeros[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 		}
 		
 	}

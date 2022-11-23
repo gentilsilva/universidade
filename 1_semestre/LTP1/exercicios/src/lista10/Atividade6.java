@@ -40,30 +40,30 @@ public class Atividade6 {
 		
 		System.out.println("Primeira Matriz:");
 		for(int i = 0; i < 4; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 4; j++) {
 				mensagem += arrNumerosUm[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 		}
 		
 		System.out.println("Segunda Matriz:");
 		for(int i = 0; i < 4; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 4; j++) {
 				mensagem += arrNumerosDois[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 
 		}
 		
 		System.out.println("Terceira Matriz:");
 		for(int i = 0; i < 4; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 4; j++) {
 				mensagem += arrNumerosResultante[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 		}
 		
 		scan.close();

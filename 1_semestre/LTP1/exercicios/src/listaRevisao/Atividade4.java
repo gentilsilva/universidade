@@ -30,11 +30,11 @@ public class Atividade4 {
 //		Imprime matriz
 		System.out.println();
 		for(int i = 0; i < 3; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 3; j++) {
 				mensagem += arrNumeros[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 		}
 		
 //		Imprime a soma da diagonal superior

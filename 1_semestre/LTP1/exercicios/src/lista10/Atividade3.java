@@ -13,11 +13,11 @@ public class Atividade3 {
 		}
 		
 		for(int i = 0; i < 4; i++) {
-			String mensagem = "[ ";
+			String mensagem = "| ";
 			for(int j = 0; j < 4; j++) {
 				mensagem += arrProduto[i][j] + " ";
 			}
-			System.out.println(mensagem + "]");
+			System.out.println(mensagem + "|");
 		}
 		
 	}

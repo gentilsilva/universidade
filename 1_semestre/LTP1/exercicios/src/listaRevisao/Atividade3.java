@@ -24,11 +24,11 @@ public class Atividade3 {
 		
 //		Imprime vetor
 		System.out.println();
-		String mensagem = "[ ";
+		String mensagem = "| ";
 		for(int i = 5; i >= 0; i--) {
 			mensagem += vetNumeros[i] + " ";
 		}
-		System.out.println(mensagem + "]");
+		System.out.println(mensagem + "|");
 		
 		scan.close();
 		
