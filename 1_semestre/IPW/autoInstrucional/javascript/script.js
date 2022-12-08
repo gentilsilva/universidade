@@ -1,7 +1,7 @@
+// Buscando/Mostrando valores no html por document.querySelector
 let valor1 = document.querySelector('.valor1');
 let valor2 = document.querySelector('.valor2');
 let resultado = document.querySelector('.resultado');
-let arrFibonacci = [];
 
 // Função para somar os dois inputs
 function somar() {    
@@ -43,14 +43,6 @@ function fatorial(fator) {
     }
 }
 
-// function fatorial(fator) {
-//     let fatorial = 1;
-//     for(i = fator; i > 0; i--) {
-//         fatorial *= i;
-//     }
-//     return resultado.innerHTML = fatorial;
-// }
-
 // Função para calcular número de euler
 function euler(fator) {
     let somatoria = 1;
@@ -70,48 +62,41 @@ function fibonacci(fator) {
     }
 }
 
-// Retorna a sequência de fibonacci no html
+// Retorna a sequência de fibonacci no html - Essa função é utilizada, pois o retorno desejado é a sequência
+// E não a soma ou o ultimo valor
 function chamarFibonacci(fator) {
+    let arrFibonacci = [];
     for(let i = 1; i <= fator; i++) {
         arrFibonacci.push(fibonacci(i));
     }
     resultado.innerHTML = arrFibonacci;
 }
 
-// Função que utiliza o primeiro input para calcular a sequência de Fibonacci
-// function fibonacci() {
-//     let entrada = Number(valor1.value);
-//     let lista = [];
-//     if(valor1.value == "") {
-//         alert("Preencha o primeiro campo para realizar esta operação");
-//     }
-//     for(i = 0; i < entrada; i++) {
-//         if(i == 0 || i == 1) {
-//             lista.push(1)
-//         } 
-//         if(i > 1) {
-//             let soma = lista[i - 1] + lista[i - 2];
-//             lista.push(soma);
-//         }
-//     }
-//     resultado.innerHTML = lista;
-// }
-
+// Função para retornar o valor de PI
 function pi() {
     resultado.innerHTML = Math.PI;
 }
 
+// Função que retorna o inverso do número digitado
+// O inverso de 1 é 1. Então o retorno será 1
 function inverso() {
-    resultado.innerHTML = 1 / Number(valor1.value);
+    if(valor1.value == 1) {
+        resultado.innerHTML = 1;
+    } else {
+        resultado.innerHTML = "1 / " + Number(valor1.value); 
+    }    
 }
 
+// Função que retorna o valor do euler elevado a uma potência
 function eulerX(fator) {
     let e = 0;
     e = euler(fator);
-    let resposta = e ** valor2.value;
+    let resposta = Math.pow(e, valor2.value);
     resultado.innerHTML = resposta;
 }
 
+// Função logaritma. Para bases diferente de 10 calculo sendo feito no if
+// Para bases 10 verifica o calculo no else
 function logaritmo() {
     let logaritimando = 0;
     let base = 0;
@@ -132,6 +117,7 @@ function logaritmo() {
 
 }
 
+// Função seno com resultado em radiano
 function seno() {
     let rad = 0;
     let sen = 0;
@@ -147,6 +133,7 @@ function seno() {
     resultado.innerHTML = sen;
 }
 
+// FUnção cosseno com resultado em radiano
 function cosseno() {
     let rad = 0;
     let cos = 0
@@ -162,6 +149,7 @@ function cosseno() {
     resultado.innerHTML = cos;
 }
 
+// Função tangente com resultado em radiano
 function tangente() {
     let rad = 0;
     let tan = 0;
@@ -177,6 +165,7 @@ function tangente() {
     resultado.innerHTML = tan;
 }
 
+// Função módulo, calculo do resto da divisão
 function modulo() {
     if(valor2.value == "" || valor2.value == 0) {
         alert("Segundo valor não pode ser vazio ou zero!")
@@ -186,6 +175,7 @@ function modulo() {
     }
 }
 
+// Calculo de número binário a partir de um número inteiro
 function binario() {
     let binario = []
     let dividendo = valor1.value;
@@ -200,6 +190,7 @@ function binario() {
     resultado.innerHTML = binario;
 }
 
+// Calculo de um número na base 8 a partir de um número inteiro
 function octa() {
     let octa = []
     let dividendo = valor1.value;
@@ -213,6 +204,8 @@ function octa() {
     resultado.innerHTML = octa;
 }
 
+// Calculo de um número na base hexa a partir de um número inteiro
+// Como hexa utiliza letras, foi adicionado condicionantes para "calcular" tais valores
 function hexa() {
     let total = []
     let dividendo = valor1.value;
@@ -243,6 +236,7 @@ function hexa() {
     resultado.innerHTML = total;
 }
 
+// Função para calcular valores de base n para qualquer número inteiro
 function baseN() {
     let total = []
     let dividendo = valor1.value;
